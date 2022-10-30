@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-black">
+
+
+    <div class="loadingScreen bg-black  vh-100  justify-content-center align-items-center ">
+        <i class=" fa-5x fa-solid fa-spinner fa-spin text-white"></i>
+    </div>
+
+
+
+
+    <section>
+        <div class="mynav">
+            <div class="mynav-logo">
+                <img src="images/logo.png">
+            </div>
+            <div class="mynav-menuIcon">
+                <i class="fa fa-align-justify fa-2x"></i>
+            </div>
+            <div class="mynav-social-icon">
+                <div class="mynav-lang">
+                    <span>
+                        <i class="fas fa-globe"></i>
+                    </span>
+                </div>
+                <div class="mynav-share">
+                    <span>
+                        <i class="fas fa-share-alt"></i>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+        <div class="nav-menu my-clos-menu">
+            <div class="nav-item">
+                <ul>
+                    <li class="item0" onclick="displayhome()" style="opacity: 1; padding-top: 25px;"><a data-list="h"
+                            class="nav-category myhome">Home</a></li>
+                    <li class="item1" onclick="searchbar() " style="opacity: 1;  padding-top: 25px;"><a
+                            data-list="search" class="nav-category search-btn">Search</a></li>
+                    <li class="item1" onclick="showcategory()" style="opacity: 1; padding-top: 25px;"><a
+                            data-list="categories" class="nav-category">Categories</a></li>
+                    <li class="item2" onclick="showArea()" style="opacity: 1; padding-top: 25px;"><a data-list="a"
+                            class="nav-category">Area</a></li>
+                    <li class="item3" onclick="showIngerd()" style="opacity: 1; padding-top: 25px;"><a data-list="i"
+                            class="nav-category">Ingredients</a></li>
+                    <li class="item6" onclick="showContacts()" style="opacity: 1; padding-top: 25px;"><a data-list="contact"
+                            class="nav-category">Contact Us</a></li>
+
+
+                </ul>
+            </div>
+            <div class="nav-social-item">
+                <a><i class="fab fa-facebook-f"></i></a>
+                <a><i class="fab fa-twitter"></i></a>
+                <a><i class="fas fa-globe"></i></a>
+                <div class="pt-3">
+                    <span>Copyright Â© 2019 All Rights Reserved.</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-5">
+        <div id="search-container" class="  container  w-75  searchbox position-fixed ">
+            <div class="row">
+                <div class="col-md-6"><input id="searchInput" onkeyup="searchByName(this.value)"
+                        class="form-control  mb-2  " placeholder="Search By Name" spellcheck="false"
+                        data-ms-editor="true">
+                </div>
+                <div class="col-md-6">
+                    <input class="form-control " type="text" onkeyup="searchByLetter(this.value) " maxlength="1"
+                        id="letter" placeholder="search By First Letter..." spellcheck="false" data-ms-editor="true">
+                </div>
+
+            </div>
+        </div>
+        <section class="container text-center  ">
+
+            <div class="row" id="res">
+
+
+            </div>
+
+
+        </section>
+        <section class="container bg-black w-75  my-1 py-2 mt-5 position-relative">
+            <div class="container ">
+                <div class="row mt-3 p-2" id="rowData">
+                    <div class="col-md-6 col-lg-3 my-3 myM  shadow position-relative">
+                        <div class="meals" onclick="getmeal()">
+                            <img id="mealImage" src="" alt="">
+                            <div class="my-layer position-absolute   d-flex  align-items-center">
+                                <h2>hello </h2>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+
+                    <div class="col-md-4 text-center my-meal  text-white">
+
+                        <img class="w-100 " src="" alt="">
+                        <br>
+                        <h1>hi</h1>
+                    </div>
+                    <div class="col-md-8  text-white text-left">
+
+                        <h2>Instructions</h2>
+                        <p></p>
+                        <p><b class="fw-bolder">Area :</b></p>
+                        <p><b class="fw-bolder">Category :</b></p>
+                        <h3>Recipes :</h3>
+                        <ul class="d-flex  flex-wrap" id="recipes">
+                            <li class="my-3 mx-1 p-1 bg-success rounded">1 Packet Filo Pastry</li>
+                            <li class="my-3 mx-1 p-1 bg-success rounded">150g Minced Beef</li>
+                            <li class="my-3 mx-1 p-1 bg-success rounded">150g Onion</li>
+                            <li class="my-3 mx-1 p-1 bg-success rounded">40g Oil</li>
+                            <li class="my-3 mx-1 p-1 bg-success rounded">Dash Salt</li>
+                            <li class="my-3 mx-1 p-1 bg-success rounded">Dash Pepper</li>
+                        </ul>
+                        <h3 class="my-2 mx-1 p-1">Tags :</h3>
+                        <ul class="d-flex " id="tags">
+                            <li class="my-3 mx-1 p-1 bg-danger rounded">Streetfood</li>
+                            <li class="my-3 mx-1 p-1 bg-danger rounded"> Onthego</li>
+                        </ul>
+                        <a class="btn btn-success text-white" target="_blank"
+                            href="https://www.visit-croatia.co.uk/croatian-cuisine/croatian-recipes/">Source</a>
+                        <a class="btn youtube text-white  bg-danger" target="_blank"
+                            href="https://www.youtube.com/watch?v=YsJXZwE5pdY">Youtub</a>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+            </div>
+
+
+
+        </section>
+        <div class="loadingContainer" style="display: none;">
+            <div class="sm-loading position-absolute ">
+                <i class="fa fa-spinner fa-spin fa-4x"></i>
+            </div>
+        </div>
+        <section id="contact" class="container myM w-75 text-center mx-auto mb-5 ">
+            <div class="p-2">
+                <h2 class="text-light mb-5">ContacUs...</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control shadow " onkeyup="validation()" id="name"
+                                placeholder="Enter Your Name" spellcheck="false" data-ms-editor="true">
+                            <div class="alert mt-1 alert-danger d-none" id="namealert" role="alert">
+                                Special Characters and Numbers not allowed
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input onkeyup="validation()" class="form-control" id="email" placeholder="Enter Email"
+                                spellcheck="false" data-ms-editor="true">
+                            <div class="alert mt-1 alert-danger d-none" id="emailalert" role="alert">
+                                Enter valid email. *Ex: xxx@yyy.zzz
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" id="phone" placeholder="Enter phone" spellcheck="false">
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" id="age" placeholder="Enter Age" spellcheck="false">
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="password" id="password" placeholder="Enter Password">
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="password" id="rePassword" placeholder="Enter RePassword">
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <button type="submit" disabled="" id="submitBtn" class="btn mt-2 btn-outline-danger">Submit</button>
+            </div>
+
+        </section>
+
+    </section>
+
+
+
+
+
+
+
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+.my-meal{
+overflow: hidden;
+cursor: pointer;
+}
+.my-meal img{
+    width: 100%;
+    border-radius: 5px;
+}
+.my-layer{
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    background-color:rgba(255, 255, 255, 0.562);
+    transform: translateY(100%);
+    transition: 1s all;
+}
+.my-meal img:hover  +.my-layer{
+
+    transform: translateY(0%);
+    overflow: visible;
+    
+    
+}
+.loadingScreen{
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 55555555555555555;
+}
+.col-md-8 ul{
+    list-style: none;
+}
+.bg-red{
+    background-color: red !important;
+    border: unset !important;
+}
+.mynav{
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    top: 0;
+    left:0;
+    background-color: #f8f6f6;
+    z-index: 999999;
+    text-align: center;
+}
+.mynav-logo{
+    padding: 25px 0;
+}
+.mynav-logo img{
+    height: 48px;
+}
+.mynav-menuIcon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+
+}
+.mynav-social-icon{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 11;
+    cursor: pointer;
+
+}
+.nav-menu{
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 250px;
+    height: 100vh;
+    z-index: 5555;
+    background-color: #000;
+    transform: translateX(-100%);
+    transition: all 0.6s ease;
+}
+.my-close-menu{
+    transform: translateX(-100%) !important;
+}
+.my-open-menu{
+    transform: scale(1) !important;
+}
+.nav-social-item {
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+}
+.nav-menu ul {
+    padding-left: 30px;
+    height: 300px;
+    overflow: hidden;
+    list-style: none !important;
+}
+.nav-menu ul a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+
+}
+#recipes , #tags{
+    padding-left: unset;
+}
+
+
+ .searchbox {
+    left: 12.5%;
+    z-index: 999;
+    top: 0;
+    padding-top: 30px;
+    background-color: #000;
+    
+}
+.searchbox .row .col-md-6{
+    flex: 0 0 50%;
+    max-width: 50%;
+} 
+.form-control{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,.7);
+    border-radius: 0;
+    color: white;
+    font-weight: 800;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-control:focus {
+    color: white;
+    background-color: black;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+#search-container{
+    display: none;
+}
+#contact{
+    display: none;
+}
+
