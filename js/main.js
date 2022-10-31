@@ -23,6 +23,7 @@ $(".mynav-menuIcon").click(function(){
 function displayhome(){
     displayMeals(allMeals)
     $("#search-container").css("display","none")
+    $("#contact").css("display","none")
     $('.mynav').animate({ left: "0px" }, 500)
     $(".nav-menu").attr("class",'nav-menu my-close-menu')
     $(".mynav-menuIcon i").attr("class","fa fa-align-justify fa-2x")
@@ -62,6 +63,7 @@ function displayMeals(mealObj){
     }
     
    $("#rowData").html(e)
+
 
 }
 function searchbar(){
@@ -199,6 +201,8 @@ function showcategory(){
     $('.mynav').animate({ left: "0px" }, 500)
     $(".nav-menu").attr("class",'nav-menu my-close-menu')
     $(".mynav-menuIcon i").attr("class","fa fa-align-justify fa-2x")
+    $("#contact").css("display","none")
+
 
 
 
@@ -257,6 +261,8 @@ function showArea(){
     $('.mynav').animate({ left: "0px" }, 500)
     $(".nav-menu").attr("class",'nav-menu my-close-menu')
     $(".mynav-menuIcon i").attr("class","fa fa-align-justify fa-2x")
+    $("#contact").css("display","none")
+
 
 
            
@@ -307,9 +313,11 @@ function showIngerd(){
            console.log(myIngred);
            displayIngredients()
     $("#search-container").css("display","none")
+    $("#contact").css("display","none")
     $('.mynav').animate({ left: "0px" }, 500)
     $(".nav-menu").attr("class",'nav-menu my-close-menu')
     $(".mynav-menuIcon i").attr("class","fa fa-align-justify fa-2x")
+
 
 
            
