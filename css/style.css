@@ -13,17 +13,18 @@ cursor: pointer;
     border-radius: 5px;
 }
 .my-layer{
+    background-color: rgba(255,255,255,0.7);
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 10px;
     right: 10px;
-    background-color:rgba(255, 255, 255, 0.562);
     transform: translateY(100%);
-    transition: 1s all;
+    transition: all 1s ease-in-out;
 }
 .my-meal img:hover  +.my-layer{
 
-    transform: translateY(0%);
+    transform: translate(0);
     overflow: visible;
     
     
