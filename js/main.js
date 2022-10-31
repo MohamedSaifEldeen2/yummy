@@ -23,6 +23,9 @@ $(".mynav-menuIcon").click(function(){
 function displayhome(){
     displayMeals(allMeals)
     $("#search-container").css("display","none")
+    $('.mynav').animate({ left: "0px" }, 500)
+    $(".nav-menu").attr("class",'nav-menu my-close-menu')
+    $(".mynav-menuIcon i").attr("class","fa fa-align-justify fa-2x")
 
 }
 
@@ -68,6 +71,9 @@ function searchbar(){
 
             $("#search-container").css("display","block")
           $("#contact").css("display","none")
+          $('.mynav').animate({ left: "0px" }, 500)
+          $(".nav-menu").attr("class",'nav-menu my-close-menu')
+          $(".mynav-menuIcon i").attr("class","fa fa-align-justify fa-2x")
 
 
       
@@ -79,6 +85,9 @@ function showContacts(){
     $("#rowData").html(box)
     $("#contact").css("display","block")
     $("#search-container").css("display","none")
+    $('.mynav').animate({ left: "0px" }, 500)
+    $(".nav-menu").attr("class",'nav-menu my-close-menu')
+    $(".mynav-menuIcon i").attr("class","fa fa-align-justify fa-2x")
 
 }
 
@@ -187,6 +196,10 @@ function showcategory(){
             myCategory=JSON.parse(category.response).categories
             displayCategories()
     $("#search-container").css("display","none")
+    $('.mynav').animate({ left: "0px" }, 500)
+    $(".nav-menu").attr("class",'nav-menu my-close-menu')
+    $(".mynav-menuIcon i").attr("class","fa fa-align-justify fa-2x")
+
 
 
 
@@ -241,6 +254,10 @@ function showArea(){
             console.log(myArea);
            displayArea()
     $("#search-container").css("display","none")
+    $('.mynav').animate({ left: "0px" }, 500)
+    $(".nav-menu").attr("class",'nav-menu my-close-menu')
+    $(".mynav-menuIcon i").attr("class","fa fa-align-justify fa-2x")
+
 
            
 
@@ -290,6 +307,9 @@ function showIngerd(){
            console.log(myIngred);
            displayIngredients()
     $("#search-container").css("display","none")
+    $('.mynav').animate({ left: "0px" }, 500)
+    $(".nav-menu").attr("class",'nav-menu my-close-menu')
+    $(".mynav-menuIcon i").attr("class","fa fa-align-justify fa-2x")
 
 
            
